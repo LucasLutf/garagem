@@ -4,5 +4,11 @@ class Marca(models.Model):
     nome = models.CharField(max_length=50)
     nacionalidade = models.CharField(max_length=50)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.nome
+    
+class Descricao(models.Model):
+    descricao = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.descricao
