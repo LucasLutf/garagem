@@ -26,9 +26,9 @@ class Cor(models.Model):
         return self.descricao
     
 class Veiculo(models.Model):
-    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    cor = models.ForeignKey(Cor, on_delete=models.CASCADE)
+    marca = models.ForeignKey(Marca, on_delete=models.PROTECT)
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
+    cor = models.ForeignKey(Cor, on_delete=models.PROTECT)
     ano = models.IntegerField()
     preco = models.DecimalField(max_digits=10, decimal_places=2)
 
